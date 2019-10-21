@@ -20,7 +20,7 @@
       line: 'GSSAPIAuthentication no'
 
 # mobile s SSH configuration.
-- name: Configure Vagrant .ssh directory.
+- name: Configure mobile .ssh directory.
   file:
     path: /home/mobile/.ssh
     state: directory
@@ -28,7 +28,7 @@
     group: mobile
     mode: 0700
 
-- name: Get Vagrant's public key.
+- name: Get vagrrantuser's public key.
   get_url:
     url: https://github.com/mitchellh/vagrant/raw/master/keys/vagrant.pub
     dest: /home/mobile/.ssh/authorized_keys
